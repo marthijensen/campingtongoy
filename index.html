@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Camping Tongoy | Tu lugar frente al mar</title>
+
+    <meta
+      name="description"
+      content="Descubre Camping Tongoy en Playa Grande, Chile. Sitios de camping, naturaleza, playa y actividades para disfrutar en familia."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="#inicio" class="logo">
+          <span>CAMPING</span>
+          <strong>TONGOY</strong>
+          <small>PLAYA GRANDE · CHILE</small>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          ☰
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#camping">El Camping</a>
+          <a href="#sitios">Nuestros Sitios</a>
+          <a href="#actividades">Actividades</a>
+          <a href="#galeria">Galería</a>
+          <a href="#ubicacion">Ubicación</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section id="inicio" class="hero">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="images/atardecer.png"
+          aria-hidden="true"
+        >
+          <source src="images/hero-video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="hero-subtitle">NATURALEZA · FAMILIA · MAR</p>
+
+          <h1>
+            Tu lugar junto<br />
+            al mar en Tongoy
+          </h1>
+
+          <p>
+            Disfruta de la tranquilidad, la playa y momentos inolvidables en
+            Camping Tongoy.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#camping" class="btn-primary"> Conoce el Camping → </a>
+
+            <a href="#contacto" class="btn-secondary"> Contáctanos </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- HIGHLIGHTS -->
+      <section
+        class="highlights-section"
+        aria-label="Lo mejor de Camping Tongoy"
+      >
+        <div class="highlights-container">
+          <div class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">🌊</span>
+            <h3>Acceso directo a la playa</h3>
+            <p>El mar a pocos pasos</p>
+          </div>
+
+          <div class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">🏕️</span>
+            <h3>Un lugar para todos</h3>
+            <p>Para disfrutar en familia</p>
+          </div>
+
+          <div class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">☀️</span>
+            <h3>Naturaleza y tranquilidad</h3>
+            <p>Desconéctate de la rutina</p>
+          </div>
+
+          <div class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">📍</span>
+            <h3>Ubicación privilegiada</h3>
+            <p>Playa Grande, Tongoy</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="camping" class="about-section">
+        <div class="about-container">
+          <div class="about-image">
+            <img
+              src="images/instalaciones.jpg"
+              alt="Instalaciones de Camping Tongoy frente al mar"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="about-content">
+            <span class="section-label"> EL CAMPING </span>
+
+            <h2>Vive la experiencia Tongoy</h2>
+
+            <p>
+              Camping Tongoy es un lugar familiar donde la naturaleza, el mar y
+              la tranquilidad se encuentran.
+            </p>
+
+            <p>
+              Contamos con sitios de camping con baño privado o compartido, para
+              que puedas elegir la alternativa que mejor se adapte a tu estadía.
+            </p>
+
+            <p>
+              Disfruta de la costa chilena, comparte momentos especiales y crea
+              recuerdos inolvidables junto al mar.
+            </p>
+
+            <a href="#sitios" class="btn-primary"> Conoce nuestros sitios → </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAMPING SITES -->
+      <section id="sitios" class="sites-section">
+        <div class="section-heading">
+          <div>
+            <span class="section-label"> NUESTROS SITIOS </span>
+
+            <h2>Elige tu forma de vivir Tongoy</h2>
+          </div>
+
+          <p>
+            Dos alternativas para disfrutar de una experiencia junto al mar.
+          </p>
+        </div>
+
+        <div class="sites-grid">
+          <!-- PRIVATE BATHROOM SITE -->
+          <article class="site-card">
+            <img
+              src="images/sitio-privado.png"
+              alt="Sitio con baño privado en Camping Tongoy"
+              loading="lazy"
+            />
+
+            <div class="site-card-content">
+              <h3>Sitio con baño privado</h3>
+
+              <div class="site-features">
+                <span>🚿 Baño privado</span>
+                <span>🏖️ Cerca del mar</span>
+              </div>
+
+              <p>
+                Una alternativa para disfrutar de mayor privacidad y comodidad
+                durante tu estadía. Vive la experiencia de acampar junto al mar
+                con tu propio baño.
+              </p>
+
+              <a href="#contacto" class="site-button">
+                Consultar disponibilidad →
+              </a>
+            </div>
+          </article>
+
+          <!-- SHARED BATHROOM SITE -->
+          <article class="site-card">
+            <img
+              src="images/sitio-compartido.png"
+              alt="Sitio con acceso a baños compartidos"
+              loading="lazy"
+            />
+
+            <div class="site-card-content">
+              <h3>Sitio con baño compartido</h3>
+
+              <div class="site-features">
+                <span>🚿 Baños compartidos</span>
+                <span>🏖️ Cerca del mar</span>
+              </div>
+
+              <p>
+                Disfruta de la naturaleza y de la experiencia de acampar junto
+                al mar, con acceso a nuestras instalaciones de baños y duchas
+                compartidas.
+              </p>
+
+              <a href="#contacto" class="site-button">
+                Consultar disponibilidad →
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ACTIVITIES -->
+      <section id="actividades" class="activities-section">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">ACTIVIDADES</span>
+            <h2>Explora y disfruta</h2>
+          </div>
+
+          <p>
+            Descubre nuevas formas de disfrutar del mar y los alrededores de
+            Tongoy.
+          </p>
+        </div>
+
+        <div class="activities-grid">
+          <!-- KAYAKS -->
+          <article class="activity-card">
+            <img
+              src="images/kayaks.png"
+              alt="Kayaks disponibles en Camping Tongoy"
+              loading="lazy"
+            />
+
+            <div class="activity-card-content">
+              <h3>Kayaks</h3>
+              <p>Explora la costa y disfruta del mar.</p>
+            </div>
+          </article>
+
+          <!-- STAND UP PADDLE -->
+          <article class="activity-card">
+            <img
+              src="images/paddleboards.png"
+              alt="Tablas de stand up paddle en Camping Tongoy"
+              loading="lazy"
+            />
+
+            <div class="activity-card-content">
+              <h3>Stand Up Paddle</h3>
+              <p>Disfruta del mar de una forma diferente.</p>
+            </div>
+          </article>
+
+          <!-- BICYCLES -->
+          <article class="activity-card">
+            <img
+              src="images/bicicletas.png"
+              alt="Bicicletas en Camping Tongoy"
+              loading="lazy"
+            />
+
+            <div class="activity-card-content">
+              <h3>Bicicletas</h3>
+              <p>Recorre los alrededores de Tongoy.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="activities-note">
+          Consulta disponibilidad y condiciones de las actividades directamente
+          con el camping.
+        </p>
+      </section>
+
+      <!-- GALLERY -->
+      <section id="galeria" class="gallery-section">
+        <div class="section-heading">
+          <div>
+            <span class="section-label"> GALERÍA </span>
+
+            <h2>
+              Un lugar lleno de<br />
+              momentos especiales
+            </h2>
+          </div>
+
+          <p>Descubre nuestros paisajes, instalaciones y espacios.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <img
+            src="images/atardecer.png"
+            alt="Atardecer en la playa de Tongoy"
+            loading="lazy"
+          />
+
+          <img
+            src="images/instalaciones.jpg"
+            alt="Instalaciones del camping"
+            loading="lazy"
+          />
+
+          <img
+            src="images/camping-playa.png"
+            alt="Vista hacia la playa"
+            loading="lazy"
+          />
+
+          <img
+            src="images/sitio-privado.png"
+            alt="Sitio con baño privado"
+            loading="lazy"
+          />
+
+          <img
+            src="images/sitio-compartido.png"
+            alt="Sitio de camping frente al mar"
+            loading="lazy"
+          />
+
+          <img
+            src="images/bathroom-shared.jpg"
+            alt="Instalaciones de baños compartidos"
+            loading="lazy"
+          />
+
+          <img
+            src="images/shared-bathroom.jpg"
+            alt="Baño con ducha"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- LOCATION -->
+      <section id="ubicacion" class="location-section">
+        <div class="location-container">
+          <div class="location-content">
+            <span class="section-label"> UBICACIÓN </span>
+
+            <h2>
+              Nos vemos en<br />
+              Playa Grande, Tongoy
+            </h2>
+
+            <p>
+              Estamos ubicados en un entorno natural privilegiado, junto al mar
+              y cerca de los atractivos de Tongoy.
+            </p>
+
+            <a
+              class="btn-primary"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Camping+Tongoy+Playa+Grande+Chile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cómo llegar →
+            </a>
+          </div>
+
+          <div class="location-map">
+            <iframe
+              title="Mapa de Camping Tongoy"
+              src="https://www.google.com/maps?q=Camping+Tongoy+Playa+Grande+Chile&amp;output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contacto" class="contact-section">
+        <div class="contact-content">
+          <span class="section-label"> CONTACTO </span>
+
+          <h2>¿Dudas? ¡Hablemos!</h2>
+
+          <p>
+            Estamos felices de ayudarte con cualquier consulta sobre nuestros
+            sitios, actividades y disponibilidad.
+          </p>
+
+          <!-- Add WhatsApp button when number is confirmed -->
+
+          <p class="contact-note">Contáctanos para más información.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>CAMPING TONGOY</h3>
+          <p>Playa Grande · Tongoy · Chile</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#camping">El Camping</a>
+          <a href="#sitios">Nuestros Sitios</a>
+          <a href="#actividades">Actividades</a>
+          <a href="#galeria">Galería</a>
+          <a href="#ubicacion">Ubicación</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © 2026 Camping Tongoy. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
