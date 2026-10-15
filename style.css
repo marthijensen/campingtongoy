@@ -1147,3 +1147,40 @@ section {
 .location-section {
   background-color: #f3eee6;
 }
+
+/* ========================================
+   CAMPING TONGOY - NAVIGATION LOGO
+   ======================================== */
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  line-height: normal;
+}
+
+.navbar .logo .navbar-logo {
+  display: block;
+  width: 170px;
+  height: auto;
+  max-height: 85px;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .navbar .logo .navbar-logo {
+    width: 150px;
+    max-height: 75px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .navbar .logo .navbar-logo {
+    width: 135px;
+    max-height: 70px;
+  }
+}
