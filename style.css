@@ -1184,3 +1184,83 @@ section {
     max-height: 70px;
   }
 }
+
+/* WHATSAPP CONTACT BUTTONS */
+
+.whatsapp-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+  margin-bottom: 20px;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* General Questions */
+.whatsapp-primary {
+  background: #244c5a;
+  color: white;
+}
+
+/* Reservations */
+.whatsapp-secondary {
+  background: #25d366;
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(0.92);
+}
+
+@media (max-width: 600px) {
+  .whatsapp-actions {
+    flex-direction: column;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+/* FOOTER LOGO */
+
+.footer-logo {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin-bottom: 18px;
+  object-fit: contain;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+  .footer-brand {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 115px;
+  }
+}

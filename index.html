@@ -190,8 +190,8 @@
                 con tu propio baño.
               </p>
 
-              <a href="#contacto" class="site-button">
-                Consultar disponibilidad →
+              <a href="sitio-privado/sitio-privado.html" class="site-button">
+                Ver detalles y precios →
               </a>
             </div>
           </article>
@@ -218,8 +218,11 @@
                 compartidas.
               </p>
 
-              <a href="#contacto" class="site-button">
-                Consultar disponibilidad →
+              <a
+                href="sitio-compartido/sitio-compartido.html"
+                class="site-button"
+              >
+                Ver detalles y precios →
               </a>
             </div>
           </article>
@@ -405,8 +408,31 @@
             sitios, actividades y disponibilidad.
           </p>
 
-          <!-- Add WhatsApp button when number is confirmed -->
-          <p class="contact-note">Contáctanos para más información.</p>
+          <div class="whatsapp-actions">
+            <!-- General Questions -->
+            <a
+              id="whatsapp-question"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="whatsapp-btn whatsapp-primary"
+            >
+              Consultar por WhatsApp
+            </a>
+
+            <!-- Reservations -->
+            <a
+              id="whatsapp-reservation"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="whatsapp-btn whatsapp-secondary"
+            >
+              Consultar disponibilidad y reservar
+            </a>
+          </div>
+
+          <p class="contact-note">Te responderemos lo antes posible.</p>
         </div>
       </section>
     </main>
@@ -415,9 +441,12 @@
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-brand">
-          <h3>CAMPING TONGOY</h3>
-          <p>Una Tradición Familiar</p>
-          <p>Playa Grande · Tongoy · Chile</p>
+          <!-- Camping Tongoy Logo -->
+          <img
+            src="images/logo-option-1-clean.png"
+            alt="Camping Tongoy - Una Tradición Familiar"
+            class="footer-logo"
+          />
         </div>
 
         <div class="footer-links">
@@ -437,5 +466,20 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      const whatsappNumber = "56975182518";
+
+      const questionMessage =
+        "¡Hola! Visité la página web de Camping Tongoy y tengo una consulta.";
+
+      const reservationMessage =
+        "¡Hola! Me gustaría consultar disponibilidad y realizar una reserva en Camping Tongoy.";
+
+      document.getElementById("whatsapp-question").href =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(questionMessage)}`;
+
+      document.getElementById("whatsapp-reservation").href =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(reservationMessage)}`;
+    </script>
   </body>
 </html>

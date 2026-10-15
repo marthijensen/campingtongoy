@@ -1,0 +1,626 @@
+/* =========================================
+   CAMPING TONGOY - SITIO CON BAÑO PRIVADO
+   ========================================= */
+
+:root {
+  --sand: #f5f0e7;
+  --ocean: #244c5a;
+  --ocean-dark: #173b48;
+  --terracotta: #c99b6b;
+  --text: #283b43;
+  --muted: #68757a;
+  --white: #ffffff;
+  --border: #e6ded2;
+}
+
+/* PAGE */
+
+.detail-page {
+  background: var(--sand);
+  color: var(--text);
+  padding: 60px 5% 100px;
+}
+
+/* NAVIGATION */
+
+.back-link {
+  color: var(--ocean);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--terracotta);
+}
+
+/* INTRODUCTION */
+
+.detail-intro {
+  max-width: 900px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.detail-intro h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 5vw, 58px);
+  color: var(--ocean);
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+.detail-intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/* PHOTO GALLERY */
+
+.detail-gallery {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 55px;
+}
+
+.detail-main-image {
+  display: block;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Optional thumbnails */
+
+.detail-thumbnails {
+  display: flex;
+  gap: 14px;
+  margin-top: 15px;
+}
+
+.detail-thumbnails img {
+  width: 150px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* =========================================
+   MAIN TWO-COLUMN LAYOUT
+   ========================================= */
+
+.detail-layout {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+
+  /* Left: site details | Right: reservation */
+  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 1fr);
+
+  gap: 32px;
+  align-items: start;
+}
+
+.detail-information,
+.detail-booking {
+  min-width: 0;
+}
+
+.detail-booking {
+  width: 100%;
+  align-self: start;
+}
+
+/* INFORMATION SECTION */
+
+.detail-information h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(25px, 2.5vw, 30px);
+  line-height: 1.3;
+  color: var(--ocean);
+  margin: 15px 0 20px;
+}
+
+.detail-information > p {
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+/* =========================================
+   AMENITIES - CLEAN LINE ICONS
+   ========================================= */
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 25px 0 45px;
+}
+
+.amenities-grid > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-width: 0;
+  min-height: 76px;
+  padding: 18px;
+
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.amenities-grid > div:hover {
+  border-color: var(--terracotta);
+  transform: translateY(-2px);
+}
+
+.amenities-grid svg {
+  width: 23px;
+  height: 23px;
+  color: var(--ocean);
+  stroke-width: 1.7;
+  flex-shrink: 0;
+}
+
+.amenities-grid span {
+  min-width: 0;
+}
+
+/* =========================================
+   INFORMATION PANELS
+   ========================================= */
+
+.detail-panel {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: none;
+}
+
+.detail-panel h2 {
+  color: var(--ocean);
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+.detail-panel p {
+  line-height: 1.65;
+}
+
+.detail-panel ul {
+  padding-left: 20px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.detail-panel li {
+  margin-bottom: 8px;
+}
+
+/* CHECK-IN / CHECK-OUT */
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.schedule-grid > div {
+  padding: 20px;
+  background: var(--sand);
+  border-radius: 12px;
+}
+
+.schedule-grid span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.schedule-grid strong {
+  display: block;
+  color: var(--ocean);
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+/* FREQUENTLY ASKED QUESTIONS */
+
+.detail-panel details {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.detail-panel details:last-child {
+  border-bottom: none;
+}
+
+.detail-panel summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ocean);
+  line-height: 1.5;
+}
+
+.detail-panel summary:hover {
+  color: var(--terracotta);
+}
+
+.detail-panel details p {
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* =========================================
+   PRICING / RESERVATION CARD
+   ========================================= */
+
+.booking-card {
+  width: 100%;
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+.booking-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+  line-height: 1.3;
+  color: var(--ocean);
+  margin: 15px 0 22px;
+}
+
+.booking-card h3 {
+  font-size: 18px;
+  color: var(--ocean);
+  margin-bottom: 12px;
+}
+
+.booking-card > p {
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.booking-period {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* PRICE */
+
+.booking-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+
+  font-size: clamp(32px, 3vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: var(--ocean);
+  margin: 12px 0;
+}
+
+.booking-price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.booking-small,
+.booking-disclaimer {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.booking-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 24px 0;
+}
+
+/* WHATSAPP BUTTON */
+
+.booking-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 58px;
+  padding: 16px 18px;
+
+  background: var(--ocean);
+  color: var(--white);
+
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+
+  border-radius: 12px;
+  margin: 24px 0 15px;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.booking-whatsapp:hover {
+  background: var(--ocean-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.booking-whatsapp:focus-visible,
+.back-link:focus-visible {
+  outline: 3px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.detail-footer {
+  text-align: center;
+  background: var(--white);
+  padding: 50px 20px;
+}
+
+.detail-footer img {
+  display: block;
+  width: 110px;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.detail-footer p {
+  color: var(--muted);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.detail-footer a {
+  display: inline-block;
+  color: var(--ocean);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.detail-footer a:hover {
+  color: var(--terracotta);
+}
+
+/* =========================================
+   TABLET / SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 800px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .detail-booking {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+  .detail-page {
+    padding: 35px 5% 65px;
+  }
+
+  .detail-intro {
+    margin-bottom: 30px;
+  }
+
+  .detail-intro h1 {
+    font-size: clamp(32px, 8vw, 42px);
+  }
+
+  .detail-intro p {
+    font-size: 15px;
+  }
+
+  .detail-gallery {
+    margin-bottom: 35px;
+  }
+
+  .detail-main-image {
+    height: 260px;
+    border-radius: 14px;
+  }
+
+  .detail-thumbnails img {
+    width: 100px;
+    height: 70px;
+  }
+
+  .detail-layout {
+    gap: 25px;
+  }
+
+  .detail-information h2 {
+    font-size: 25px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 22px 0 35px;
+  }
+
+  .amenities-grid > div {
+    min-height: 65px;
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  .amenities-grid svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .detail-panel {
+    padding: 24px;
+  }
+
+  .schedule-grid {
+    gap: 10px;
+  }
+
+  .schedule-grid > div {
+    padding: 15px;
+  }
+
+  .schedule-grid strong {
+    font-size: 19px;
+  }
+
+  .booking-card {
+    padding: 24px;
+  }
+
+  .booking-card h2 {
+    font-size: 25px;
+  }
+
+  .booking-price {
+    font-size: 36px;
+  }
+
+  .booking-whatsapp {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .detail-footer {
+    padding: 40px 20px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .amenities-grid > div,
+  .booking-whatsapp,
+  .back-link {
+    transition: none;
+  }
+
+  .amenities-grid > div:hover,
+  .booking-whatsapp:hover {
+    transform: none;
+  }
+}
+
+/* =========================================
+   PRICING + FAQ COLUMN
+   ========================================= */
+
+.detail-booking {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking-card {
+  position: static;
+}
+
+.booking-faq {
+  width: 100%;
+  margin: 0;
+  padding: 28px;
+}
+
+.booking-faq h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  line-height: 1.3;
+  color: #244c5a;
+  margin: 0 0 16px;
+}
+
+.booking-faq summary {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.booking-faq details p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .booking-faq {
+    padding: 24px;
+  }
+}
+
+/* PRIVATE SITE PHOTO GALLERY */
+
+.detail-thumbnails {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.detail-thumbnails img {
+  width: 130px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s ease;
+}
+
+.detail-thumbnails img:hover {
+  border-color: #244c5a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .detail-thumbnails img {
+    width: 95px;
+    height: 70px;
+  }
+}

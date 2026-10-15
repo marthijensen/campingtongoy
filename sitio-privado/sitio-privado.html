@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sitio con Baño Privado | Camping Tongoy</title>
+
+    <meta
+      name="description"
+      content="Conoce nuestros sitios con baño privado en Camping Tongoy. Descubre tarifas, instalaciones, horarios y consulta disponibilidad por WhatsApp."
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="sitio-privado.css" />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a
+          href="../index.html"
+          class="logo"
+          aria-label="Camping Tongoy - Inicio"
+        >
+          <img
+            src="../images/logo-option-1-clean.png"
+            alt="Camping Tongoy - Una Tradición Familiar"
+            class="navbar-logo"
+          />
+        </a>
+
+        <a href="../index.html#sitios" class="back-link">
+          ← Volver al Camping
+        </a>
+      </nav>
+    </header>
+
+    <main class="detail-page">
+      <!-- INTRODUCTION -->
+      <section class="detail-intro">
+        <span class="section-label">NUESTROS SITIOS</span>
+
+        <h1>Sitio con baño privado</h1>
+
+        <p>
+          Disfruta de la tranquilidad de acampar frente al mar con mayor
+          privacidad y comodidad.
+        </p>
+      </section>
+
+      <!-- PHOTO GALLERY -->
+      <section class="detail-gallery">
+        <img
+          id="private-gallery-main"
+          class="detail-main-image"
+          src="../images/privado-1.png"
+          alt="Sitio con baño privado frente al mar en Camping Tongoy"
+        />
+
+        <div class="detail-thumbnails">
+          <img
+            src="../images/privado-1.png"
+            alt="Sitio privado con vista al mar"
+            onclick="changePrivatePhoto(this)"
+          />
+
+          <img
+            src="../images/privado-2.png"
+            alt="Vista general de los sitios privados"
+            onclick="changePrivatePhoto(this)"
+          />
+
+          <img
+            src="../images/privado-3.png"
+            alt="Sitio privado con árbol y pérgola"
+            onclick="changePrivatePhoto(this)"
+          />
+        </div>
+      </section>
+
+      <!-- TWO-COLUMN LAYOUT -->
+      <section class="detail-layout">
+        <!-- LEFT COLUMN -->
+        <div class="detail-information">
+          <span class="section-label">TU ESTADÍA</span>
+
+          <h2>Todo lo que necesitas para disfrutar</h2>
+
+          <p>
+            Nuestros sitios con baño privado están ubicados en primera línea,
+            cerca del mar, y cuentan con espacios equipados para disfrutar en
+            familia.
+          </p>
+
+          <!-- AMENITIES -->
+          <h2>¿Qué incluye tu sitio?</h2>
+
+          <div class="amenities-grid">
+            <div>
+              <i data-lucide="bath"></i>
+              <span>Baño privado</span>
+            </div>
+
+            <div>
+              <i data-lucide="shower-head"></i>
+              <span>Agua caliente</span>
+            </div>
+
+            <div>
+              <i data-lucide="tent-tree"></i>
+              <span>Pérgola cubierta</span>
+            </div>
+
+            <div>
+              <i data-lucide="lightbulb"></i>
+              <span>Iluminación</span>
+            </div>
+
+            <div>
+              <i data-lucide="plug"></i>
+              <span>Electricidad básica</span>
+            </div>
+
+            <div>
+              <i data-lucide="utensils"></i>
+              <span>Mesa para comer</span>
+            </div>
+
+            <div>
+              <i data-lucide="cooking-pot"></i>
+              <span>Mesa para cocinilla</span>
+            </div>
+
+            <div>
+              <i data-lucide="flame"></i>
+              <span>Parrilla</span>
+            </div>
+
+            <div>
+              <i data-lucide="trash-2"></i>
+              <span>Basurero</span>
+            </div>
+
+            <div>
+              <i data-lucide="users"></i>
+              <span>Hasta 6 personas</span>
+            </div>
+          </div>
+
+          <!-- CHECK-IN / CHECK-OUT -->
+          <div class="detail-panel">
+            <h2>Horarios de tu estadía</h2>
+
+            <div class="schedule-grid">
+              <div>
+                <span>CHECK-IN</span>
+                <strong>13:00 hrs</strong>
+              </div>
+
+              <div>
+                <span>CHECK-OUT</span>
+                <strong>12:00 hrs</strong>
+              </div>
+            </div>
+
+            <p style="margin-top: 20px; color: #68757a">
+              Horario de atención: 09:00 a 20:00 hrs.
+            </p>
+          </div>
+
+          <!-- IMPORTANT INFORMATION -->
+          <div class="detail-panel">
+            <h2>Información importante</h2>
+
+            <ul>
+              <li>La tarifa corresponde a un valor diario.</li>
+              <li>Los precios publicados incluyen IVA.</li>
+
+              <li>
+                Persona adicional: $10.000 CLP. Consulta las condiciones y
+                capacidad máxima.
+              </li>
+
+              <li>El sitio cuenta con electricidad básica.</li>
+
+              <li>
+                No se permiten hervidores ni electrodomésticos de alto consumo.
+              </li>
+
+              <li>Se permiten secadores de pelo pequeños de viaje.</li>
+
+              <li>
+                Los huéspedes deben traer mesas adicionales si las necesitan.
+              </li>
+
+              <li>
+                La disponibilidad se confirma directamente con Camping Tongoy.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END LEFT COLUMN -->
+
+        <!-- RIGHT COLUMN -->
+        <aside class="detail-booking">
+          <!-- PRICING CARD -->
+          <div class="booking-card">
+            <span class="section-label">TARIFAS</span>
+
+            <h2>Planifica tu estadía</h2>
+
+            <p class="booking-period">Tarifa hasta el 14 de enero de 2027</p>
+
+            <div class="booking-price">
+              $71.000
+              <span>CLP / día</span>
+            </div>
+
+            <p class="booking-small">IVA incluido · Hasta 6 personas</p>
+
+            <div class="booking-divider"></div>
+
+            <h3>Temporada alta 2027</h3>
+
+            <p>
+              Desde el 15 de enero de 2027 comenzarán a regir nuevas tarifas.
+              Consulta los valores actualizados antes de realizar tu reserva.
+            </p>
+
+            <div class="booking-divider"></div>
+
+            <h3>¿Quieres reservar?</h3>
+
+            <p>
+              Escríbenos por WhatsApp para consultar disponibilidad según tus
+              fechas.
+            </p>
+
+            <a
+              class="booking-whatsapp"
+              href="https://wa.me/56975182518?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20y%20tarifas%20para%20un%20sitio%20con%20ba%C3%B1o%20privado%20en%20Camping%20Tongoy."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Consultar y reservar por WhatsApp →
+            </a>
+
+            <p class="booking-disclaimer">
+              La disponibilidad y tarifa final se confirman directamente con el
+              camping.
+            </p>
+          </div>
+          <!-- END PRICING CARD -->
+
+          <!-- FAQ UNDER PRICING -->
+          <div class="detail-panel booking-faq">
+            <h2>Preguntas frecuentes</h2>
+
+            <details>
+              <summary>¿El sitio tiene baño privado?</summary>
+              <p>Sí. Cada sitio de esta categoría cuenta con su propio baño.</p>
+            </details>
+
+            <details>
+              <summary>¿Hay agua caliente?</summary>
+              <p>Sí, las duchas cuentan con agua caliente.</p>
+            </details>
+
+            <details>
+              <summary>¿Cuántas personas pueden alojarse?</summary>
+              <p>
+                La capacidad indicada es de hasta 6 personas. Consulta las
+                condiciones para personas adicionales.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿Puedo llevar electrodomésticos?</summary>
+              <p>
+                El sitio cuenta con electricidad básica. No se permiten
+                hervidores ni aparatos de alto consumo.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿Cómo puedo reservar?</summary>
+              <p>
+                Puedes consultar tarifas, disponibilidad y coordinar tu reserva
+                directamente por WhatsApp.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿Los precios cambian en enero?</summary>
+              <p>
+                Sí. Las tarifas actuales se indican hasta el 14 de enero de
+                2027. Desde el 15 de enero de 2027 comenzarán a regir nuevas
+                tarifas.
+              </p>
+            </details>
+          </div>
+          <!-- END FAQ -->
+        </aside>
+        <!-- END RIGHT COLUMN -->
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="detail-footer">
+      <img
+        src="../images/logo-option-1-clean.png"
+        alt="Camping Tongoy - Una Tradición Familiar"
+      />
+
+      <p>Camping Tongoy · Una Tradición Familiar</p>
+
+      <p>Playa Grande · Tongoy · Chile</p>
+
+      <a href="../index.html"> Volver al inicio → </a>
+
+      <p style="margin-top: 25px; font-size: 13px">
+        © 2026 Camping Tongoy. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="../script.js"></script>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+
+    <script>
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    </script>
+
+    <script>
+      function changePrivatePhoto(thumbnail) {
+        const mainImage = document.getElementById("private-gallery-main");
+
+        mainImage.src = thumbnail.src;
+        mainImage.alt = thumbnail.alt;
+      }
+    </script>
+  </body>
+</html>
