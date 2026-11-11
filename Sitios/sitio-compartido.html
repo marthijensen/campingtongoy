@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sitio con Baño Compartido | Camping Tongoy</title>
+
+    <meta
+      name="description"
+      content="Conoce nuestros sitios con baño compartido en Camping Tongoy. Disfruta de la playa, conoce nuestras instalaciones y consulta disponibilidad por WhatsApp."
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="sitios.css" />
+
+    <style>
+      /* Shared bathroom page enhancements */
+
+      .detail-gallery {
+        max-width: 1200px;
+        margin: 0 auto 55px;
+      }
+
+      .detail-main-image {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 20px;
+        display: block;
+      }
+
+      .detail-thumbnails {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 16px;
+      }
+
+      .detail-thumbnails button {
+        width: 100%;
+        padding: 0;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        background: transparent;
+        cursor: pointer;
+        overflow: hidden;
+      }
+
+      .detail-thumbnails button:hover,
+      .detail-thumbnails button.active {
+        border-color: #244c5a;
+      }
+
+      .detail-thumbnails img {
+        display: block;
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .amenities-grid > div {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .amenity-icon {
+        font-size: 23px;
+        flex-shrink: 0;
+      }
+
+      .detail-booking {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .booking-faq {
+        margin: 0;
+      }
+
+      @media (max-width: 600px) {
+        .detail-main-image {
+          height: 260px;
+          border-radius: 14px;
+        }
+
+        .detail-thumbnails {
+          gap: 8px;
+        }
+
+        .detail-thumbnails img {
+          height: 80px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a
+          href="../index.html"
+          class="logo"
+          aria-label="Camping Tongoy - Inicio"
+        >
+          <img
+            src="../images/logo-option-1-clean.png"
+            alt="Camping Tongoy - Una Tradición Familiar"
+            class="navbar-logo"
+          />
+        </a>
+
+        <a href="../index.html#sitios" class="back-link">
+          ← Volver al Camping
+        </a>
+      </nav>
+    </header>
+
+    <main class="detail-page">
+      <!-- INTRODUCTION -->
+      <section class="detail-intro">
+        <span class="section-label">NUESTROS SITIOS</span>
+
+        <h1>Sitio con baño compartido</h1>
+
+        <p>
+          Vive la experiencia de acampar junto al mar, rodeado de naturaleza y
+          tranquilidad. Una alternativa para disfrutar de Tongoy en familia.
+        </p>
+      </section>
+
+      <!-- PHOTO GALLERY -->
+      <section class="detail-gallery" aria-label="Galería de fotografías">
+        <img
+          id="main-gallery-image"
+          class="detail-main-image"
+          src="../images/sitio-compartido.png"
+          alt="Sitio con baño compartido en Camping Tongoy"
+        />
+
+        <div class="detail-thumbnails">
+          <button
+            type="button"
+            class="active"
+            data-image="../images/bathroom-shared.jpg"
+            data-alt="Instalaciones de baños compartidos"
+            aria-label="Ver instalaciones de baños compartidos"
+          >
+            <img
+              src="../images/bathroom-shared.jpg"
+              alt="Instalaciones de baños compartidos"
+              loading="lazy"
+            />
+          </button>
+
+          <button
+            type="button"
+            data-image="../images/shared-bathroom.jpg"
+            data-alt="Baños y duchas compartidas"
+            aria-label="Ver baños y duchas compartidas"
+          >
+            <img
+              src="../images/shared-bathroom.jpg"
+              alt="Baños y duchas"
+              loading="lazy"
+            />
+          </button>
+
+          <button
+            type="button"
+            data-image="../images/camping-playa.png"
+            data-alt="Acceso a la playa desde Camping Tongoy"
+            aria-label="Ver acceso a la playa"
+          >
+            <img
+              src="../images/camping-playa.png"
+              alt="Acceso a la playa"
+              loading="lazy"
+            />
+          </button>
+        </div>
+      </section>
+
+      <!-- SITE INFORMATION -->
+      <section class="detail-layout">
+        <div class="detail-information">
+          <span class="section-label">TU ESTADÍA</span>
+
+          <h2>Disfruta de la naturaleza con comodidad</h2>
+
+          <p>
+            Nuestros sitios con baño compartido te permiten disfrutar de la
+            experiencia de acampar junto al mar, con acceso a instalaciones
+            sanitarias compartidas.
+          </p>
+
+          <!-- AMENITIES -->
+          <div class="amenities-grid">
+            <div>
+              <i data-lucide="toilet"></i>
+              <span>Acceso a baños compartidos</span>
+            </div>
+
+            <div>
+              <i data-lucide="shower-head"></i>
+              <span>Acceso a duchas compartidas</span>
+            </div>
+
+            <div>
+              <i data-lucide="waves"></i>
+              <span>Cercanía a la playa</span>
+            </div>
+
+            <div>
+              <i data-lucide="trees"></i>
+              <span>Entorno natural</span>
+            </div>
+          </div>
+
+          <p>
+            Consulta directamente con el camping sobre equipamiento adicional,
+            electricidad y capacidad máxima de cada sitio.
+          </p>
+
+          <!-- CHECK-IN AND CHECK-OUT -->
+          <div class="detail-panel">
+            <h2>Horarios de tu estadía</h2>
+
+            <div class="schedule-grid">
+              <div>
+                <span>CHECK-IN</span>
+                <strong>13:00 hrs</strong>
+              </div>
+
+              <div>
+                <span>CHECK-OUT</span>
+                <strong>12:00 hrs</strong>
+              </div>
+            </div>
+
+            <p style="margin-top: 15px; color: #68757a">
+              Horarios sujetos a confirmación para esta categoría.
+            </p>
+          </div>
+
+          <!-- IMPORTANT INFORMATION -->
+          <div class="detail-panel">
+            <h2>Información importante</h2>
+
+            <ul>
+              <li>Los baños y duchas son de uso compartido entre huéspedes.</li>
+
+              <li>
+                Consulta la capacidad máxima de tu sitio antes de reservar.
+              </li>
+
+              <li>Confirma qué equipamiento está incluido en tu reserva.</li>
+
+              <li>Las tarifas pueden variar según la fecha de estadía.</li>
+
+              <li>
+                Las reservas se coordinan directamente con Camping Tongoy por
+                WhatsApp.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PRICING AND FAQ COLUMN -->
+        <aside class="detail-booking">
+          <!-- PRICING CARD -->
+          <div class="booking-card">
+            <span class="section-label">TARIFAS</span>
+
+            <h2>Planifica tu estadía</h2>
+
+            <p class="booking-period">
+              Tarifa vigente desde el 15 de diciembre de 2026
+            </p>
+
+            <div class="booking-price">
+              $66.600
+              <span>CLP por día</span>
+            </div>
+
+            <p class="booking-small">
+              Sitio con acceso a baños y duchas compartidas.
+            </p>
+
+            <div class="booking-divider"></div>
+
+            <h3>Consulta disponibilidad</h3>
+
+            <p>
+              Disfruta de una estadía frente al mar en Camping Tongoy. Confirma
+              disponibilidad y condiciones directamente con nuestro equipo.
+            </p>
+
+            <a
+              class="booking-whatsapp"
+              href="https://wa.me/56975182518?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20un%20sitio%20con%20ba%C3%B1o%20compartido%20en%20Camping%20Tongoy."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Consultar por WhatsApp →
+            </a>
+
+            <p class="booking-disclaimer">
+              Tarifa en pesos chilenos. Vigente desde el 15 de diciembre de
+              2026. Sujeta a confirmación con el camping.
+            </p>
+          </div>
+
+          <!-- FREQUENTLY ASKED QUESTIONS -->
+          <div class="detail-panel booking-faq">
+            <h2>Preguntas frecuentes</h2>
+
+            <details>
+              <summary>¿Los baños son compartidos?</summary>
+              <p>
+                Sí. Los huéspedes de esta categoría utilizan las instalaciones
+                sanitarias compartidas del camping.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿El camping tiene duchas?</summary>
+              <p>Sí, hay instalaciones de duchas compartidas.</p>
+            </details>
+
+            <details>
+              <summary>¿Cuántas personas pueden alojarse?</summary>
+              <p>
+                Consulta la capacidad máxima del sitio al solicitar tu reserva.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿Cómo puedo reservar?</summary>
+              <p>
+                Puedes consultar disponibilidad, tarifas y coordinar tu reserva
+                directamente por WhatsApp.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                ¿Cuáles son las tarifas desde diciembre de 2026?
+              </summary>
+              <p>
+                Desde el 15 de diciembre de 2026, el sitio con baño compartido
+                tiene una tarifa de $66.600 CLP por día y el sitio con baño
+                privado de $78.500 CLP por día. Consulta disponibilidad
+                directamente con el camping.
+              </p>
+            </details>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="detail-footer">
+      <img
+        src="../images/logo-option-1-clean.png"
+        alt="Camping Tongoy - Una Tradición Familiar"
+        loading="lazy"
+      />
+
+      <p>Camping Tongoy · Una Tradición Familiar</p>
+      <p>Playa Grande · Tongoy · Chile</p>
+
+      <a href="../index.html"> Volver al inicio → </a>
+    </footer>
+
+    <!-- PHOTO GALLERY INTERACTION -->
+    <script>
+      const mainImage = document.getElementById("main-gallery-image");
+      const thumbnailButtons = document.querySelectorAll(
+        ".detail-thumbnails button",
+      );
+
+      thumbnailButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          mainImage.src = button.dataset.image;
+          mainImage.alt = button.dataset.alt;
+
+          thumbnailButtons.forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          button.classList.add("active");
+        });
+      });
+    </script>
+
+    <script src="../script.js"></script>
+
+    <!-- LUCIDE ICONS -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+
+    <script>
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    </script>
+  </body>
+</html>
