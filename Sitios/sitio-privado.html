@@ -305,6 +305,43 @@
     </main>
 
     <!-- FOOTER -->
+
+    <!-- FULL-SCREEN PHOTO GALLERY -->
+    <dialog
+      id="site-lightbox"
+      class="site-lightbox"
+      aria-label="Galería de fotografías"
+    >
+      <button
+        type="button"
+        class="site-lightbox-close"
+        aria-label="Cerrar galería"
+      >
+        ×
+      </button>
+
+      <button
+        type="button"
+        class="site-lightbox-prev"
+        aria-label="Foto anterior"
+      >
+        ❮
+      </button>
+
+      <figure class="site-lightbox-figure">
+        <img id="site-lightbox-image" alt="" />
+        <figcaption id="site-lightbox-caption"></figcaption>
+      </figure>
+
+      <button
+        type="button"
+        class="site-lightbox-next"
+        aria-label="Foto siguiente"
+      >
+        ❯
+      </button>
+    </dialog>
+
     <footer class="detail-footer">
       <img
         src="../images/logo-option-1-clean.png"
@@ -341,5 +378,6 @@
         mainImage.alt = thumbnail.alt;
       }
     </script>
+    <script src="galeria-sitios.js"></script>
   </body>
 </html>

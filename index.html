@@ -357,6 +357,35 @@
       </section>
 
       <!-- LOCATION -->
+
+      <!-- EXPANDED PHOTO GALLERY -->
+      <dialog
+        id="gallery-lightbox"
+        class="gallery-lightbox"
+        aria-label="Visor de fotografías"
+      >
+        <button
+          class="lightbox-close"
+          type="button"
+          aria-label="Cerrar galería"
+        >
+          ×
+        </button>
+
+        <button class="lightbox-prev" type="button" aria-label="Foto anterior">
+          ❮
+        </button>
+
+        <figure class="lightbox-figure">
+          <img id="lightbox-image" alt="" />
+          <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+
+        <button class="lightbox-next" type="button" aria-label="Foto siguiente">
+          ❯
+        </button>
+      </dialog>
+
       <section id="ubicacion" class="location-section">
         <div class="location-container">
           <div class="location-content">
@@ -478,6 +507,88 @@
 
       document.getElementById("whatsapp-reservation").href =
         `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(reservationMessage)}`;
+
+      /* CAMPING TONGOY PHOTO GALLERY */
+
+      const galleryImages = [...document.querySelectorAll(".gallery-grid img")];
+
+      const lightbox = document.getElementById("gallery-lightbox");
+      const lightboxImage = document.getElementById("lightbox-image");
+      const lightboxCaption = document.getElementById("lightbox-caption");
+
+      let currentPhoto = 0;
+      let touchStartX = 0;
+
+      function showPhoto(index) {
+        currentPhoto = (index + galleryImages.length) % galleryImages.length;
+
+        const photo = galleryImages[currentPhoto];
+
+        lightboxImage.src = photo.src;
+        lightboxImage.alt = photo.alt;
+        lightboxCaption.textContent = photo.alt;
+      }
+
+      galleryImages.forEach((photo, index) => {
+        photo.tabIndex = 0;
+        photo.setAttribute("role", "button");
+        photo.setAttribute("aria-label", `Ampliar: ${photo.alt}`);
+
+        function openPhoto() {
+          showPhoto(index);
+          lightbox.showModal();
+        }
+
+        photo.addEventListener("click", openPhoto);
+
+        photo.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openPhoto();
+          }
+        });
+      });
+
+      document
+        .querySelector(".lightbox-close")
+        .addEventListener("click", () => lightbox.close());
+
+      document
+        .querySelector(".lightbox-prev")
+        .addEventListener("click", () => showPhoto(currentPhoto - 1));
+
+      document
+        .querySelector(".lightbox-next")
+        .addEventListener("click", () => showPhoto(currentPhoto + 1));
+
+      lightbox.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight") showPhoto(currentPhoto + 1);
+        if (event.key === "ArrowLeft") showPhoto(currentPhoto - 1);
+      });
+
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) lightbox.close();
+      });
+
+      lightbox.addEventListener(
+        "touchstart",
+        (event) => {
+          touchStartX = event.changedTouches[0].screenX;
+        },
+        { passive: true },
+      );
+
+      lightbox.addEventListener(
+        "touchend",
+        (event) => {
+          const difference = event.changedTouches[0].screenX - touchStartX;
+
+          if (Math.abs(difference) > 50) {
+            showPhoto(currentPhoto + (difference < 0 ? 1 : -1));
+          }
+        },
+        { passive: true },
+      );
     </script>
   </body>
 </html>
