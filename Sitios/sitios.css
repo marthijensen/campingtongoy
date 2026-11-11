@@ -983,3 +983,52 @@
     font-size: 12px;
   }
 }
+
+/* ==========================================
+   ACCOMMODATION RESERVATION BUTTON
+   ========================================== */
+
+.detail-reserve-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 26px;
+  padding: 15px 28px;
+  min-height: 52px;
+
+  background: var(--ocean);
+  color: #ffffff;
+
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: background 0.2s ease;
+}
+
+.detail-reserve-btn:hover {
+  background: var(--ocean-dark);
+  color: #ffffff;
+}
+
+.detail-reserve-btn:focus-visible {
+  outline: 3px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+#reservar {
+  scroll-margin-top: 110px;
+}
+
+@media (max-width: 600px) {
+  .detail-reserve-btn {
+    display: flex;
+    width: 100%;
+    max-width: 340px;
+    margin: 24px auto 0;
+    padding: 16px 20px;
+  }
+}
