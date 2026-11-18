@@ -8,10 +8,81 @@
 
     <meta
       name="description"
-      content="Descubre Camping Tongoy en Playa Grande, Chile. Sitios de camping, naturaleza, playa y actividades para disfrutar en familia."
+      content="Descubre Camping Tongoy en Playa Grande, Chile. Sitios de camping para hasta 6 personas, naturaleza, playa y actividades para disfrutar en familia."
     />
 
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .header-whatsapp {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 16px;
+        background: #25d366;
+        color: #fff;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .header-whatsapp:hover {
+        background: #128c7e;
+      }
+
+      .capacity-notice {
+        max-width: 850px;
+        margin: 30px auto;
+        padding: 24px;
+        background: #f5f8f5;
+        border-left: 4px solid #398568;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .capacity-notice h3 {
+        margin: 0 0 10px;
+      }
+
+      .capacity-notice p {
+        margin: 0;
+        line-height: 1.7;
+      }
+
+      .capacity-feature {
+        font-weight: 700;
+      }
+
+      .footer-contact {
+        text-align: center;
+        padding: 24px 15px;
+      }
+
+      .footer-contact p {
+        margin: 8px 0;
+      }
+
+      .footer-contact a {
+        color: #25d366;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .header-whatsapp {
+          font-size: 12px;
+          padding: 8px 11px;
+        }
+
+        .capacity-notice {
+          margin: 25px 16px;
+          padding: 20px;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -24,6 +95,15 @@
             alt="Camping Tongoy - Una Tradición Familiar"
             class="navbar-logo"
           />
+        </a>
+
+        <a
+          class="header-whatsapp"
+          href="https://wa.me/56975182518"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp +56 9 7518 2518
         </a>
 
         <button
@@ -81,7 +161,14 @@
           <div class="hero-buttons">
             <a href="#camping" class="btn-primary"> Conoce el Camping → </a>
 
-            <a href="#contacto" class="btn-secondary"> Contáctanos </a>
+            <a
+              href="https://wa.me/56975182518?text=Hola%2C%20quiero%20consultar%20por%20el%20camping."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary"
+            >
+              Consultar por WhatsApp
+            </a>
           </div>
         </div>
       </section>
@@ -167,6 +254,16 @@
           </p>
         </div>
 
+        <div class="capacity-notice">
+          <h3>🏕️ Capacidad de nuestros sitios</h3>
+          <p>
+            Cada sitio de camping está considerado para un máximo de
+            <strong>6 personas</strong>. Si tu grupo supera esta cantidad,
+            podrán aplicarse cargos adicionales. Para conocer las condiciones y
+            consultar disponibilidad, contáctanos por WhatsApp.
+          </p>
+        </div>
+
         <div class="sites-grid">
           <!-- PRIVATE BATHROOM SITE -->
           <article class="site-card">
@@ -182,6 +279,7 @@
               <div class="site-features">
                 <span>🚿 Baño privado</span>
                 <span>🏖️ Cerca del mar</span>
+                <span class="capacity-feature">👨‍👩‍👧‍👦 Hasta 6 personas</span>
               </div>
 
               <p>
@@ -191,7 +289,7 @@
               </p>
 
               <a href="Sitios/sitio-privado.html" class="site-button">
-                Ver detalles y precios →
+                Ver detalles del sitio →
               </a>
             </div>
           </article>
@@ -210,6 +308,7 @@
               <div class="site-features">
                 <span>🚿 Baños compartidos</span>
                 <span>🏖️ Cerca del mar</span>
+                <span class="capacity-feature">👨‍👩‍👧‍👦 Hasta 6 personas</span>
               </div>
 
               <p>
@@ -219,7 +318,7 @@
               </p>
 
               <a href="Sitios/sitio-compartido.html" class="site-button">
-                Ver detalles y precios →
+                Ver detalles del sitio →
               </a>
             </div>
           </article>
@@ -245,7 +344,7 @@
           <article class="activity-card">
             <img
               src="images/kayaks.png"
-              alt="Kayaks disponibles en Camping Tongoy"
+              alt="Kayaks en Camping Tongoy"
               loading="lazy"
             />
 
@@ -266,20 +365,6 @@
             <div class="activity-card-content">
               <h3>Stand Up Paddle</h3>
               <p>Disfruta del mar de una forma diferente.</p>
-            </div>
-          </article>
-
-          <!-- BICYCLES -->
-          <article class="activity-card">
-            <img
-              src="images/bicicletas.png"
-              alt="Bicicletas en Camping Tongoy"
-              loading="lazy"
-            />
-
-            <div class="activity-card-content">
-              <h3>Bicicletas</h3>
-              <p>Recorre los alrededores de Tongoy.</p>
             </div>
           </article>
         </div>
@@ -356,8 +441,6 @@
         </div>
       </section>
 
-      <!-- LOCATION -->
-
       <!-- EXPANDED PHOTO GALLERY -->
       <dialog
         id="gallery-lightbox"
@@ -386,6 +469,7 @@
         </button>
       </dialog>
 
+      <!-- LOCATION -->
       <section id="ubicacion" class="location-section">
         <div class="location-container">
           <div class="location-content">
@@ -431,14 +515,18 @@
 
           <p>
             Estamos felices de ayudarte con cualquier consulta sobre nuestros
-            sitios, actividades y disponibilidad.
+            sitios, actividades, tarifas y disponibilidad.
+          </p>
+
+          <p>
+            <strong>WhatsApp: +56 9 7518 2518</strong>
           </p>
 
           <div class="whatsapp-actions">
             <!-- GENERAL QUESTIONS -->
             <a
               id="whatsapp-question"
-              href="#"
+              href="https://wa.me/56975182518"
               target="_blank"
               rel="noopener noreferrer"
               class="whatsapp-btn whatsapp-primary"
@@ -449,12 +537,12 @@
             <!-- RESERVATIONS -->
             <a
               id="whatsapp-reservation"
-              href="#"
+              href="https://wa.me/56975182518"
               target="_blank"
               rel="noopener noreferrer"
               class="whatsapp-btn whatsapp-secondary"
             >
-              Consultar disponibilidad y reservar
+              Consultar tarifas y disponibilidad
             </a>
           </div>
 
@@ -485,6 +573,19 @@
         </div>
       </div>
 
+      <div class="footer-contact">
+        <p>¿Quieres conocer nuestras tarifas y disponibilidad?</p>
+        <p>
+          <a
+            href="https://wa.me/56975182518"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp: +56 9 7518 2518
+          </a>
+        </p>
+      </div>
+
       <p class="copyright">
         © 2026 Camping Tongoy. Todos los derechos reservados.
       </p>
@@ -500,7 +601,7 @@
         "¡Hola! Visité la página web de Camping Tongoy y tengo una consulta.";
 
       const reservationMessage =
-        "¡Hola! Me gustaría consultar disponibilidad y realizar una reserva en Camping Tongoy.";
+        "¡Hola! Me gustaría consultar tarifas y disponibilidad para una reserva en Camping Tongoy.";
 
       document.getElementById("whatsapp-question").href =
         `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(questionMessage)}`;
@@ -562,12 +663,19 @@
         .addEventListener("click", () => showPhoto(currentPhoto + 1));
 
       lightbox.addEventListener("keydown", (event) => {
-        if (event.key === "ArrowRight") showPhoto(currentPhoto + 1);
-        if (event.key === "ArrowLeft") showPhoto(currentPhoto - 1);
+        if (event.key === "ArrowRight") {
+          showPhoto(currentPhoto + 1);
+        }
+
+        if (event.key === "ArrowLeft") {
+          showPhoto(currentPhoto - 1);
+        }
       });
 
       lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) lightbox.close();
+        if (event.target === lightbox) {
+          lightbox.close();
+        }
       });
 
       lightbox.addEventListener(

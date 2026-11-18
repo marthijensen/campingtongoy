@@ -8,11 +8,87 @@
 
     <meta
       name="description"
-      content="Conoce nuestros sitios con baño privado en Camping Tongoy. Descubre tarifas, instalaciones, horarios y consulta disponibilidad por WhatsApp."
+      content="Conoce nuestros sitios con baño privado en Camping Tongoy. Sitios para hasta 6 personas, instalaciones y comodidades junto al mar. Consulta tarifas y disponibilidad por WhatsApp."
     />
 
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="sitios.css" />
+
+    <style>
+      .detail-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .detail-whatsapp-header {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: 30px;
+        background: #25d366;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .detail-whatsapp-header:hover {
+        background: #128c7e;
+      }
+
+      .capacity-highlight {
+        margin: 24px 0;
+        padding: 22px;
+        border-left: 4px solid #398568;
+        background: #f4f8f5;
+        border-radius: 10px;
+      }
+
+      .capacity-highlight h3 {
+        margin: 0 0 10px;
+        color: #244c5a;
+      }
+
+      .capacity-highlight p {
+        margin: 0;
+        line-height: 1.7;
+      }
+
+      .footer-whatsapp {
+        display: inline-block;
+        margin-top: 14px;
+        padding: 11px 20px;
+        border-radius: 30px;
+        background: #25d366;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .footer-whatsapp:hover {
+        background: #128c7e;
+      }
+
+      @media (max-width: 600px) {
+        .detail-header-actions {
+          gap: 8px;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+        }
+
+        .detail-whatsapp-header {
+          padding: 8px 10px;
+          font-size: 12px;
+        }
+
+        .capacity-highlight {
+          padding: 18px;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -31,15 +107,25 @@
           />
         </a>
 
-        <a href="../index.html#sitios" class="back-link">
-          ← Volver al Camping
-        </a>
+        <div class="detail-header-actions">
+          <a
+            href="https://wa.me/56975182518"
+            class="detail-whatsapp-header"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp +56 9 7518 2518
+          </a>
+
+          <a href="../index.html#sitios" class="back-link">
+            ← Volver al Camping
+          </a>
+        </div>
       </nav>
     </header>
 
     <main class="detail-page">
       <!-- INTRODUCTION -->
-
       <section class="detail-intro">
         <span class="section-label">NUESTROS SITIOS</span>
 
@@ -151,8 +237,21 @@
 
             <div>
               <i data-lucide="users"></i>
-              <span>Hasta 6 personas</span>
+              <span>Hasta 6 personas por sitio</span>
             </div>
+          </div>
+
+          <!-- CAPACITY INFORMATION -->
+          <div class="capacity-highlight">
+            <h3>Capacidad por sitio</h3>
+
+            <p>
+              Cada sitio de camping está considerado para un máximo de
+              <strong>6 personas</strong>. En caso de grupos de más de 6
+              personas, podrán aplicarse cargos adicionales. Consulta las
+              condiciones directamente con Camping Tongoy antes de realizar tu
+              reserva.
+            </p>
           </div>
 
           <!-- CHECK-IN / CHECK-OUT -->
@@ -181,12 +280,11 @@
             <h2>Información importante</h2>
 
             <ul>
-              <li>La tarifa corresponde a un valor diario.</li>
-              <li>Los precios publicados incluyen IVA.</li>
+              <li>Cada sitio está considerado para hasta 6 personas.</li>
 
               <li>
-                Persona adicional: $10.000 CLP. Consulta las condiciones y
-                capacidad máxima.
+                Para grupos de más de 6 personas, podrán aplicarse cargos
+                adicionales. Consulta las condiciones antes de reservar.
               </li>
 
               <li>El sitio cuenta con electricidad básica.</li>
@@ -202,7 +300,8 @@
               </li>
 
               <li>
-                La disponibilidad se confirma directamente con Camping Tongoy.
+                Las tarifas y la disponibilidad se confirman directamente con
+                Camping Tongoy.
               </li>
             </ul>
           </div>
@@ -211,37 +310,30 @@
 
         <!-- RIGHT COLUMN -->
         <aside class="detail-booking">
-          <!-- PRICING CARD -->
+          <!-- RESERVATION CARD -->
           <div class="booking-card" id="reservar">
-            <span class="section-label">TARIFAS</span>
+            <span class="section-label">RESERVAS</span>
 
             <h2>Planifica tu estadía</h2>
 
-            <p class="booking-period">
-              Tarifa vigente desde el 15 de diciembre de 2026
-            </p>
-
-            <div class="booking-price">
-              $78.500
-              <span>CLP por día</span>
-            </div>
-
             <p class="booking-small">
-              Sitio con baño privado para mayor comodidad durante tu estadía.
+              Sitio con baño privado para mayor comodidad durante tu estadía,
+              considerado para hasta 6 personas.
             </p>
 
             <div class="booking-divider"></div>
 
-            <h3>Consulta disponibilidad</h3>
+            <h3>Consulta tarifas y disponibilidad</h3>
 
             <p>
-              Disfruta de mayor privacidad y comodidad junto al mar. Confirma
-              disponibilidad y condiciones directamente con nuestro equipo.
+              Disfruta de mayor privacidad y comodidad junto al mar. Contáctanos
+              para conocer nuestras tarifas, disponibilidad y condiciones de
+              reserva.
             </p>
 
             <a
               class="booking-whatsapp"
-              href="https://wa.me/56975182518?text=Hola%2C%20quisiera%20consultar%20disponibilidad%20para%20un%20sitio%20con%20ba%C3%B1o%20privado%20en%20Camping%20Tongoy."
+              href="https://wa.me/56975182518?text=Hola%2C%20quisiera%20consultar%20tarifas%20y%20disponibilidad%20para%20un%20sitio%20con%20ba%C3%B1o%20privado%20en%20Camping%20Tongoy."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -249,12 +341,13 @@
             </a>
 
             <p class="booking-disclaimer">
-              Tarifa en pesos chilenos. Vigente desde el 15 de diciembre de
-              2026. Sujeta a confirmación con el camping.
+              Las tarifas y condiciones se informan directamente por WhatsApp.
+              Para grupos de más de 6 personas pueden aplicarse cargos
+              adicionales.
             </p>
           </div>
 
-          <!-- FAQ UNDER PRICING -->
+          <!-- FREQUENTLY ASKED QUESTIONS -->
           <div class="detail-panel booking-faq">
             <h2>Preguntas frecuentes</h2>
 
@@ -271,8 +364,9 @@
             <details>
               <summary>¿Cuántas personas pueden alojarse?</summary>
               <p>
-                La capacidad indicada es de hasta 6 personas. Consulta las
-                condiciones para personas adicionales.
+                Cada sitio está considerado para hasta 6 personas. Si tu grupo
+                supera esta cantidad, podrán aplicarse cargos adicionales.
+                Consulta las condiciones directamente con el camping.
               </p>
             </details>
 
@@ -293,14 +387,10 @@
             </details>
 
             <details>
-              <summary>
-                ¿Cuáles son las tarifas desde diciembre de 2026?
-              </summary>
+              <summary>¿Dónde puedo consultar las tarifas?</summary>
               <p>
-                Desde el 15 de diciembre de 2026, el sitio con baño compartido
-                tiene una tarifa de $66.600 CLP por día y el sitio con baño
-                privado de $78.500 CLP por día. Consulta disponibilidad
-                directamente con el camping.
+                Para conocer las tarifas vigentes de nuestros sitios, comunícate
+                directamente con Camping Tongoy por WhatsApp al +56 9 7518 2518.
               </p>
             </details>
           </div>
@@ -309,8 +399,6 @@
         <!-- END RIGHT COLUMN -->
       </section>
     </main>
-
-    <!-- FOOTER -->
 
     <!-- FULL-SCREEN PHOTO GALLERY -->
     <dialog
@@ -348,6 +436,7 @@
       </button>
     </dialog>
 
+    <!-- FOOTER -->
     <footer class="detail-footer">
       <img
         src="../images/logo-option-1-clean.png"
@@ -358,7 +447,18 @@
 
       <p>Playa Grande · Tongoy · Chile</p>
 
-      <a href="../index.html"> Volver al inicio → </a>
+      <a
+        href="https://wa.me/56975182518"
+        class="footer-whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp +56 9 7518 2518
+      </a>
+
+      <p>
+        <a href="../index.html">Volver al inicio →</a>
+      </p>
 
       <p style="margin-top: 25px; font-size: 13px">
         © 2026 Camping Tongoy. Todos los derechos reservados.
@@ -384,6 +484,7 @@
         mainImage.alt = thumbnail.alt;
       }
     </script>
+
     <script src="galeria-sitios.js"></script>
   </body>
 </html>
